@@ -1,0 +1,12 @@
+.navbar{
+    height:250px; 
+    background-image: url('https://media.istockphoto.com/photos/sea-view-dining-and-living-room-of-luxury-summer-beach-house-with-picture-id1145176609?k=20&m=1145176609&s=170667a&w=0&h=svlFXAVZE5uviSJwKD1M-EIcAvwj0KBf5MhDsrQD2mU='); 
+    background-repeat: no-repeat center;   
+    background-size: cover;    
+}
+
+.imgdetail{
+    height: 500px;
+    width: 700px;
+    background-color: rgb(105, 9, 57);
+}
