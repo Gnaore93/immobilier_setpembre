@@ -31,11 +31,17 @@
           <div class = "col-12 col-md-6 col-lg-3 col-xl-3"> 
 
             <div class="card mt-2 mb-2">
-                <img class= "card_img_top" src="{{habitat.image.url}}" alt="Chicago Skyscrapers"style="height:200px;">
+                <img class= "card_img_top" src="{{habitat.image.url}}" alt="Chicago Skyscrapers"style="height:200px;"><a href="">
+                  
+                </a>
                 <!--card content-->
                 <div class="card-body" style="height:240px ;">
 
-                  <h5 class="card-title"> <a href="{%url 'detail' habitat.id %}">{{habitat.title}}</a> </h5>
+                  <h5 class="card-title"> 
+                      <a href="{%url 'detail' habitat.id %}">
+                        {{habitat.title}}
+                      </a> 
+                  </h5>
                   <p class="card-text">{{habitat.desc}}</p>
                   <p class="card-text">Publié il ya {{habitat.date_create|timesince}}</p>
                   <!--bouton-->
