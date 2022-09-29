@@ -1,0 +1,39 @@
+{% extends 'base.html'%}
+
+{% load widget_tweaks %}
+
+{% block content %}
+
+<div style="height: 1180px;" class="containerrdv text-center">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="b " style="width: 1200px;height:800px;border-radius:10px;border:1px solid blue;margin-top: 20px; background-color:#FFFFFF;opacity:0.7;margin: 0 auto">
+                <h1 class="text-center" style="color:blueviolet;">Prenez un rendez-vous</h1>
+                    <div style="width: 800px;height:500px;position:absolute;margin-left:205px;padding-top:100px;background-color:#FFFFFF">
+                        <form method="post" enctype="multipart/form-data">
+                            {% csrf_token%}
+                            
+                            {% render_field form.nom class="form_control btn-block" placeholder='Non'  %}
+                            <br>
+                            {% render_field form.ville class="form_control btn-block" placeholder='Ville'  %}
+                            <br>
+                            {% render_field form.quartier class="form_control btn-block" placeholder=' Quartier'  %}
+                            <br>
+                            {% render_field form.job class="form_control btn-block" placeholder='job'  %}
+                            <br>
+                            {% render_field form.telephone class="form_control btn-block" placeholder='Telephone'  %}
+                            <br>
+                            {% render_field form.date_rdv class="form_control btn-block" placeholder='Date rendez vous'  %}
+                            <br>
+                            {% render_field form.email class="form_control btn-block" placeholder='Email'  %}
+                            <br> <br>
+                            <button class="btn btn-primary btn-block" style="background-color: blueviolet;border-radius:5px;margin:20px" type="submit">Enregistrer</button>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

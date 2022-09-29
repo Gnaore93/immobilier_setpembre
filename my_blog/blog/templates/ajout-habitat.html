@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+{% block content%}
+
+    <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="b" style="width: 1200px;height:800px;border-radius:10px;border:1px solid blue;margin:15px;background-color:#FFFFFF">
+                    <h1 class="text-center" style="color:blueviolet;"> Ajouter un appartement</h1>
+                        <div style="width: 800px;height:500px;position:absolute;margin-left:205px;padding-top:160px;background-color:#FFFFFF">
+
+                            <form method="POST" action="" enctype="multipart/form-data">
+                                {% csrf_token%}
+                                {{ form }} <br> <br>
+                                
+                            <button class="btn btn-primary btn-block" style="background-color: blueviolet;border-radius:5px;" type="submit">Enregistrer</button>
+
+                            <a href="" class="btn btn-primary btn-block" style="background-color: red"><i class="fas fa-edit"> Modifier</i></a>
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock%}
+

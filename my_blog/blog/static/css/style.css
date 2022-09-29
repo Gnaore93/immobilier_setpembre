@@ -1,12 +1,34 @@
 .navbar{
-    height:250px; 
-    background-image: url('https://media.istockphoto.com/photos/sea-view-dining-and-living-room-of-luxury-summer-beach-house-with-picture-id1145176609?k=20&m=1145176609&s=170667a&w=0&h=svlFXAVZE5uviSJwKD1M-EIcAvwj0KBf5MhDsrQD2mU='); 
+    height:120px; 
+    width: 100%;
+    background-color:  #5881A6;
     background-repeat: no-repeat center;   
-    background-size: cover;    
+    background-size: cover;   
+       
+}
+.containerrdv{
+    background-image: url("https://img.freepik.com/free-photo/hand-presenting-model-house-home-loan-campaign_53876-104970.jpg?w=2000");
 }
 
-.imgdetail{
-    height: 500px;
-    width: 700px;
-    background-color: rgb(105, 9, 57);
+.containera{
+    width: 1800px;
+    background-image: url("https://www.cnet.com/a/img/resize/b5be2f3e5d1141f993802fe8709d5787f2e32914/hub/2019/10/11/1f3c5a3a-fe55-48cf-9465-1dd31f970430/google-nest-mini-00-03-53-04-still001.jpg?auto=webp&fit=crop&height=675&width=1200");
 }
+
+.navbar ul a{
+    color:white;
+
+}
+
+html,body{
+    height: 100%;
+}
+
+
+.imgdetail{
+    height: 150px;
+    width: 700px;
+    background-color: rgb(157, 218, 233);
+}
+
+

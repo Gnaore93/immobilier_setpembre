@@ -1,0 +1,64 @@
+<div class="container">
+    <h1>Detail habitat</h1>
+    <img class="imgdetail" src="{{detailarticle.image.url}}" alt="">
+    <h2>{{detailarticle.title}}</h2>
+    <p>{{detailarticle.desc}}</p>
+        <!-- <h3><i>{{detailarticle.desc}}</i></h3> -->  
+</div>
+
+
+
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+    {%include 'nav.html'%} 
+    {% extends'base.html'%}
+    
+    
+
+
+</body>
+{%include 'footer.html'%} 
+</html>
+
+
+
+def home(request):
+    list_habitats = Habitat.objects.all()
+    
+    return render(request,"index.html",locals())
+
+def detail(request,id_habitat):
+    detailarticle = Habitat.objects.get(id=id_habitat)
+    categorie = Habitat.categorie
+    habitatenrelation = Habitat.objects.filter(Categorie=categorie)
+    return render(request,'detail.html',locals() )
+
+
+
+    categorie = Habitat.categorie
+    articlenrelation = Habitat.objects.filter(categorie=categorie)
+
+    'categrie = Habitat.categorie
+    'relation  = Habitat.objects.filter(categorie = categrie)
+    ,{"aer": rela}
+
+    ,{"aer": relation})
+
+    
+    style="position: absolute;left: 1300px;top: 250px ;background-color:red"
+
+    background-image: url('https://static.rdc.moveaws.com/images/hero/big-boi/new/hp-hero-desktop-xl.jpg'); 
+
+    
+
+    

@@ -1,67 +1,44 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>My blog</title>
+{% extends 'base.html'%}
+{% load static %} 
+
+{% block content %}
+
+  <h1 class = "text-center">La maison de vos reves c'est ici!!! </h1>
+  
+  <div class = "container " style="background-color:#F2F2F2;min-height: 80vh" >
     
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <!-- Google Fonts Roboto -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
-    />
-    <!-- MDB -->
-    <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}" />
-    
-  </head>
-  <body>
-    {%include 'nav.html'%}
-    
-    <h1 class = "text-center">Bienvenue sur notre site</h1>
-    <div class = "container" style="background-color:#F2F2F2;" >
         <div class="row">
-          {% for habitat in liste_habitats %}
-          <div class = "col-12 col-md-6 col-lg-3 col-xl-3"> 
+              {% for habitat in list_habitats %}
+            
+                <div class = "col-12 col-md-6 col-lg-3 col-xl-3"> 
+                  <div class="card mt-2 mb-2">
+                    <img class= "card_img_top" src="{{habitat.image.url}}" alt="Chicago Skyscrapers"style="height:200px;"><a href="{%url 'detail' habitat.id %}">
+                    <a href="{%url 'detail' habitat.id %}"></a>
+                    </a>
+                    
+                      <!--card content-->
+                    <div class="card-body" style="height:240px ;">
 
-            <div class="card mt-2 mb-2">
-                <img class= "card_img_top" src="{{habitat.image.url}}" alt="Chicago Skyscrapers"style="height:200px;"><a href="">
-                  
-                </a>
-                <!--card content-->
-                <div class="card-body" style="height:240px ;">
-
-                  <h5 class="card-title"> 
-                      <a href="{%url 'detail' habitat.id %}">
-                        {{habitat.title}}
-                      </a> 
-                  </h5>
-                  <p class="card-text">{{habitat.desc}}</p>
-                  <p class="card-text">Publié il ya {{habitat.date_create|timesince}}</p>
-                  <!--bouton-->
-                  <a href="{%url 'detail' habitat.id %}" class ="btn btn-primary">Voir detail...</a>
+                      <h5 class="card-title"> 
+                        <h4>{{habitat.prix}}</h4>
+                          <a href="{%url 'detail' habitat.id %}">
+                            <a style="position:absolute;top:5px;background-color:lavender" href="{%url 'detail' habitat.id %}"></a>
+                            {{habitat.title}}
+                          </a> 
+                      </h5>
+                      <p class="card-text">{{habitat.desc}}</p>
+                      <p class="card-text">Publié il ya {{habitat.date_create|timesince}}</p>
+                      <!--bouton-->
+                      <a href="{%url 'detail' habitat.id %}" class ="btn btn-primary">Voir detail...</a> 
+                      <a href="{% url 'Rendez_Vous_Client' %}" class ="btn btn-primary" style="margin-left: 30px;position:absolute;top:375px;height:38px;background-color:lavender;">rdv...</a>
+                    </div> 
+                  </div>
                 </div>
-                
-                
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-         
-    </div>
-
+              {% endfor %}
+        </div> 
     
+  </div>
+    
+ 
+{% endblock %}
 
-
-    <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
-    <!-- Custom scripts -->
-    <script type="text/javascript"></script>
-  </body>
-  {%include 'footer.html'%}
-</html>
